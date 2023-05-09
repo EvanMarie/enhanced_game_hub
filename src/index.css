@@ -1,0 +1,9 @@
+html,
+body {
+  margin: 0 auto;
+  font-family: monospace !important;
+}
+
+form {
+  width: 100%;
+}

@@ -1,1 +1,2 @@
-# enhanced_game_hub
+# game-hub
+# gamehub_vscode
