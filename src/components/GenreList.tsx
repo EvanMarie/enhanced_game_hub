@@ -29,7 +29,7 @@ const GenreList = ({ selectedGenre, onSelectGenre }: Props) => {
         Genres
       </Heading>
       <List>
-        {data.map((data) => (
+        {data?.results.map((data) => (
           <ListItem
             onClick={() => onSelectGenre(data)}
             key={data.id}
