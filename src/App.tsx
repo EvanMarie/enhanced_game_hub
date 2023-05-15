@@ -1,22 +1,11 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Flex,
-  Grid,
-  GridItem,
-  HStack,
-  Show,
-} from "@chakra-ui/react";
-import NavBar from "./components/NavBar";
+import { Box, Flex, Grid, GridItem, Show } from "@chakra-ui/react";
+import { useState } from "react";
 import GameGrid from "./components/GameGrid";
+import GameHeading from "./components/GameHeading";
 import GenreList from "./components/GenreList";
-import { Genre } from "./hooks/useGenres";
+import NavBar from "./components/NavBar";
 import PlatformSelector from "./components/PlatformSelector";
 import SortSelector from "./components/SortSelector";
-import GameHeading from "./components/GameHeading";
-import { Platform } from "./hooks/usePlatforms";
 
 // undefined: the absence of a value
 // null: the intentional absence of a value
@@ -34,16 +23,6 @@ function App() {
 
   return (
     <div>
-      {/* Chakra button example: 
-      <Button colorScheme="teal" size="sm"> 
-        Amazing App
-      </Button>*/}
-
-      {/* Grid areas before setting to be responsive:
-      <Grid templateAreas={`"nav  nav" "aside  main"`}> 
-      MORE INFO ON RESPONSIVE STYLES:
-      ** https://chakra-ui.com/docs/styled-system/responsive-styles ** */}
-
       <Grid
         templateAreas={{
           // mobile devices
