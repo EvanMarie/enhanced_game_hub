@@ -8,16 +8,18 @@ import {
   Spinner,
   Text,
 } from "@chakra-ui/react";
-import useGenres, { Genre } from "../hooks/useGenres";
+import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
+import useGameQueryStore from "../store";
 
-interface Props {
-  onSelectGenre: (genre: Genre) => void;
-  selectedGenreId?: number;
-}
-
-const GenreList = ({ selectedGenreId, onSelectGenre }: Props) => {
+const GenreList = () => {
   const { data, isLoading, error } = useGenres();
+  const selectedGenreId = useGameQueryStore(
+    (selector) => selector.gameQuery.genreId
+  );
+  const setSelectedGenreId = useGameQueryStore(
+    (selector) => selector.setGenreId
+  );
 
   if (error) return null;
   // not using spinner, but keeping in case retrieval of genres changes
@@ -31,7 +33,7 @@ const GenreList = ({ selectedGenreId, onSelectGenre }: Props) => {
       <List>
         {data?.results.map((data) => (
           <ListItem
-            onClick={() => onSelectGenre(data)}
+            onClick={() => setSelectedGenreId(data.id)}
             key={data.id}
             paddingY="5px"
             paddingX="5px"
@@ -49,14 +51,14 @@ const GenreList = ({ selectedGenreId, onSelectGenre }: Props) => {
                 // image will fill the container while preserving aspect ratio
                 objectFit="cover"
                 src={getCroppedImageUrl(data.image_background)}
-                onClick={() => onSelectGenre(data)}
+                onClick={() => setSelectedGenreId(data.id)}
               />{" "}
               <Button
                 // to fix extra long genre names
                 whiteSpace="normal"
                 textAlign="left"
                 fontWeight={data.id === selectedGenreId ? "bold" : "normal"}
-                onClick={() => onSelectGenre(data)}
+                onClick={() => setSelectedGenreId(data.id)}
                 fontSize="xl"
                 color={data.id === selectedGenreId ? "cyan" : ""}
                 textDecoration={data.id === selectedGenreId ? "underline" : ""}
