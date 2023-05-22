@@ -16,7 +16,7 @@ const ErrorPage = () => {
         margin="auto"
         marginTop={12}
         textAlign="center"
-        color="cyan"
+        color="deeppink"
         boxShadow="0px 0px 10px rgba(0, 255, 255, 0.3)"
       >
         <HStack justify="center" align="center" spacing={2} margin={3}>
