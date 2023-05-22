@@ -14,7 +14,7 @@ const ExpandableText = ({ children }: Props) => {
 
   // if expanded, show all text, if collapsed, show substring
   const summary = expanded
-    ? children.substring(0, children.search("Español"))
+    ? children //.substring(0, children.search("Español"))
     : children.substring(0, limit) + "... ";
 
   return (
@@ -24,8 +24,9 @@ const ExpandableText = ({ children }: Props) => {
         size="xs"
         fontSize="14px"
         fontWeight="bold"
-        colorScheme="purple"
-        marginLeft={1}
+        backgroundColor="white"
+        color="deeppink"
+        marginLeft={2}
         onClick={() => setExpanded(!expanded)}
       >
         {expanded ? "Less" : "More"}
