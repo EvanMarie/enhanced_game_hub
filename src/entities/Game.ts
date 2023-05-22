@@ -1,4 +1,4 @@
-import { Platform } from "./Platform";
+import { Platform } from "../hooks/Platform";
 
 
 export interface Game {
