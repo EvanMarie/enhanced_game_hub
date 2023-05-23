@@ -25,7 +25,7 @@ const ExpandableText = ({ children }: Props) => {
         fontSize="14px"
         fontWeight="bold"
         backgroundColor="white"
-        color="deeppink"
+        color="purple.500"
         marginLeft={2}
         onClick={() => setExpanded(!expanded)}
       >
