@@ -4,6 +4,7 @@ import { Box, GridItem, Heading, SimpleGrid, Spinner } from "@chakra-ui/react";
 import ExpandableText from "../components/ExpandableText";
 import GameAttributes from "../components/GameAttributes";
 import GameTrailer from "../components/GameTrailer";
+// Path will not work without this ridicuous pathname
 import Screenshots from "../components/ScreenShots";
 
 const GameDetailPage = () => {
