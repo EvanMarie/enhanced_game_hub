@@ -3,8 +3,9 @@
 Welcome to Game Hub, your one-stop destination to explore video games across various platforms. Whether you're a casual gamer or a hardcore enthusiast, Game Hub offers detailed insights into your favorite games, from summaries and screenshots to attributes and trailers.
 
 [Live Demo on Vercel](https://enhanced-game-hub.vercel.app/)
+![Screenshot](https://www.evanmarie.com/content/images/size/w2000/2023/05/enhanced_gh_01-1.png)
 
-![Screenshot](http://www.evanmarie.com/content/media/2023/05/enhanced_game_hub.mp4)
+![Video](http://www.evanmarie.com/content/media/2023/05/enhanced_game_hub.mp4)
 
 ## Table of Contents
 
